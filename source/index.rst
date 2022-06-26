@@ -30,6 +30,6 @@ The resources also contain (links to) more/other resources for understanding how
    :glob:
    :maxdepth: 1
    :includehidden:
-   :caption: Network
+   :caption: Scanning
 
-   docs/network/*
+   docs/scanning/*
