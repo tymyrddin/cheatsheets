@@ -1,4 +1,4 @@
-# Linux log commands
+# log commands
 
 ## Less, more and zmore
 
