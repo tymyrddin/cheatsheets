@@ -1,4 +1,4 @@
-# Traceroute CheatSheet
+# Traceroute cheatsheet
 
 ## Basic commands
 
