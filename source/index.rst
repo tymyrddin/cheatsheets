@@ -33,3 +33,11 @@ The resources also contain (links to) more/other resources for understanding how
    :caption: Scanning
 
    docs/scanning/*
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+   :includehidden:
+   :caption: Application
+
+   docs/application/*

@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Red team cheatsheets'
+project = 'Cheatsheets'
 copyright = '2022, TyMyrddin'
 author = 'TyMyrddin'
 
@@ -65,7 +65,7 @@ html_theme_options = {
     'titles_only': True
 }
 
-html_title = "Attack trees"
+html_title = "Cheatsheets"
 html_logo = "img/logo.png"
 html_favicon = "img/favicon.ico"
 
