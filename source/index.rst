@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Red team cheatsheets
+Cheatsheets
 ================================================
 
 Gathering some possibly (re)useful resources. We are not big fans of checklist approaches (though such can be handy when purpose of pentesting is to (dis)prove compliance to a set of rules). We prefer to understand how technologies work, instead of following some linearised process (which is like trying to fit a square peg in a round hole anyhow), so our categorisation is somewhat arbitrary on occasion.

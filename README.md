@@ -1,4 +1,4 @@
-# Red team cheatsheets
+# Cheatsheets
 
 ![Publish Cheatsheets using Sphinx](https://github.com/tymyrddin/attack-trees/workflows/Publish%20Cheatsheets%20using%20Sphinx/badge.svg?branch=main)
  Deployed: https://tymyrddin.github.io/cheatsheets/
