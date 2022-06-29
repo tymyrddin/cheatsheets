@@ -38,6 +38,14 @@ The resources also contain (links to) more/other resources for understanding how
    :glob:
    :maxdepth: 1
    :includehidden:
+   :caption: Enumeration
+
+   docs/enumeration/*
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+   :includehidden:
    :caption: Application
 
    docs/application/*
