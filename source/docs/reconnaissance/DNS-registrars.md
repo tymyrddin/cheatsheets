@@ -7,7 +7,7 @@ Whois databases contain this information and much of it can be accessed via the 
 * Look up the target at [InterNIC](https://www.internic.net/whois.html) to find out who the registrar is
 * Go to the (RIR) whois database to get detailed records
     
-###  RIR
+##  RIR
 A Regional Internet Registry (RIR) is an organization that manages the allocation and registration of Internet number resources within a particular region of the world. Internet number resources include IP addresses and autonomous system (AS) numbers.
 
 * [RIPE Network Coordination Centre](http://www.ripe.net)
