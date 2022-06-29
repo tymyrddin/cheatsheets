@@ -4,12 +4,12 @@ Weevely is a web shell designed for post-exploitation purposes that can be exten
 
 Create a web shell:
 
-```shell
+```bash
 # weevely generate <password> <path>
 ```
 
 Connect:
-```shell
+```bash
 # weevely <URL> <password>
 weevely>
 ```
