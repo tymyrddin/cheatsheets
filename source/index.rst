@@ -49,3 +49,11 @@ The resources also contain (links to) more/other resources for understanding how
    :caption: Application
 
    docs/application/*
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+   :includehidden:
+   :caption: Databases
+
+   docs/databases/*
