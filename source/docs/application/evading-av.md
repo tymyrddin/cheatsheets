@@ -2,7 +2,7 @@
 
 Whether delivering a payload through an application vulnerability exploit, or through social engineering, running code on target machines is part of most penetration tests. That means bypassing antivirus software or other host-based protections. 
 
-Tools like Veil and MSFVenom may in the lab be good for learning everything around this in a lab context, but the most effective way to avoid antivirus detection on a target machine is to create customized backdoors.
+Tools like Veil and MSFVenom may be useful for learning purposes in a lab context, but the most effective way to avoid antivirus detection on a target machine in a real-life organisational context is to create customized backdoors.
 
 * Don't develop for avoiding all. Include finding out what protections the target uses in reconnaisance.
 * Keep it as simple as possible. Just enough to get in, disable antivirus, and then move in with more-featured tools.
