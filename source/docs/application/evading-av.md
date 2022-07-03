@@ -16,4 +16,8 @@ Plug in [exploit-db shellcodes](https://www.exploit-db.com/shellcodes) into the 
 After compilation, check to see if the AV products running in the lab detect the bugger. If it gets detected start 
 playing with segments and other formats, etcetera.
 
-Or, [learn to write your own in python from scratch](https://github.com/tymyrddin/nirridit). Not that hard.
+Or, [learn to write your own in python from scratch](https://github.com/tymyrddin/nirridit). 
+
+> “The important thing is not to shout at this point, Vimes told himself. Do not…what do they call it…go postal? 
+> Treat this as a learning exercise. Find out why the world is not as you thought it was. Assemble the facts, digest 
+> the information, consider the implications. THEN go postal. But with precision.” ― Terry Pratchett, Thud! 
