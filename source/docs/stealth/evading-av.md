@@ -5,10 +5,10 @@ on target machines is part of most penetration testing. That means bypassing ant
 protections. 
 
 Tools like Veil and MSFVenom may be useful for learning purposes in a lab context, but the most effective way to avoid 
-antivirus detection on a target machine in a real-life organisational context is to create customized payloads or 
+antivirus detection on a target machine in a real-life organisational context is to create customised payloads or 
 develop your own from scratch based on context of the pentesting/red teaming..
 
-## Customisation
+## Customised payloads
 
 For customisation, use Metasploit templates in the `data/templates/src` directory for DLLs, EXEs, and Windows Services.
 Plug in [exploit-db shellcodes](https://www.exploit-db.com/shellcodes) into the template. Or use `msfpayload` or 
@@ -19,7 +19,7 @@ Plug in [exploit-db shellcodes](https://www.exploit-db.com/shellcodes) into the 
 After compilation, check to see if the AV products running in the lab detect the bugger. If it gets detected start 
 playing with segments and other formats, etcetera.
 
-## From scratch
+## Payloads from scratch
 
 Note that creating a new payload or shellcode that creates a new signature that is not present in the antivirus tools 
 database can still be effective but falls short on the new solutions that base their detection on heuristics 
