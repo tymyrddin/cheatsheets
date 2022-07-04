@@ -23,11 +23,14 @@ playing with segments and other formats, etcetera.
 
 Note that creating a new payload or shellcode that creates a new signature that is not present in the antivirus tools 
 database can still be effective but falls short on the new solutions that base their detection on heuristics 
-and behavioural analysis.
+and behavioural analysis. Learn to write your own payloads in python from scratch:
 
-[Learn to write your own payloads in python from scratch](https://github.com/tymyrddin/nirridit). 
+* [Nirridit (Evil files)](https://github.com/tymyrddin/nirridit)
+* [Ymrir (Network hacking scripts)](https://github.com/tymyrddin/ymrir)
 
-* Don't develop for avoiding all. Include finding out what protections the target uses in reconnaisance.
+In general:
+
+* Don't develop for avoiding all AV. Include finding out what protections the target uses in reconnaisance.
 * Keep it as simple as possible. 
 * Perhaps just enough to get in, disable antivirus, and then move in with more-featured tools?
 
