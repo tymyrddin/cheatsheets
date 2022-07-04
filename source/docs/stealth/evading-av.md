@@ -5,7 +5,8 @@ on target machines is part of most penetration testing. That means bypassing ant
 protections. 
 
 Tools like Veil and MSFVenom may be useful for learning purposes in a lab context, but the most effective way to avoid 
-antivirus detection on a target machine in a real-life organisational context is to create customized payloads.
+antivirus detection on a target machine in a real-life organisational context is to create customized payloads or 
+develop your own from scratch based on context of the pentesting/red teaming..
 
 ## Customisation
 
@@ -28,7 +29,7 @@ and behavioural analysis.
 
 * Don't develop for avoiding all. Include finding out what protections the target uses in reconnaisance.
 * Keep it as simple as possible. 
-* Perhaps just enough to get in, disable antivirus, and then move in with more-featured tools.
+* Perhaps just enough to get in, disable antivirus, and then move in with more-featured tools?
 
 > “The important thing is not to shout at this point, Vimes told himself. Do not…what do they call it…go postal? 
 > Treat this as a learning exercise. Find out why the world is not as you thought it was. Assemble the facts, digest 
