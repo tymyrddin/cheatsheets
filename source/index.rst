@@ -14,6 +14,14 @@ The resources also contain (links to) more/other resources for understanding how
    :glob:
    :maxdepth: 1
    :includehidden:
+   :caption: Stealth
+
+   docs/stealth/*
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+   :includehidden:
    :caption: Linux
 
    docs/linux/*
