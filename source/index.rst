@@ -65,3 +65,11 @@ The resources also contain (links to) more/other resources for understanding how
    :caption: Databases
 
    docs/databases/*
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+   :includehidden:
+   :caption: Payloads
+
+   docs/payloads/*
