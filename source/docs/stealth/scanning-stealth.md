@@ -8,5 +8,14 @@ Never use connect scan (-sT), which establishes a full connection to a port, if 
     * Idle scan gives a similar result but uses a different type of scanning. If you can identify an intermediate machine (a zombie) with low traffic and predictable fragment identification values (IP ID) you can send spoofed packets to your target, with the source set to the zombie with <code>-sI zombiehost:port</code>. An IDS will see the idle scan target as the system doing the scanning. If the idle target is a by your target trusted machine that can bypass host-based access control lists, jackpot!
 
 
+|Template number 	|Template name 	|Description |
+| --- | --- | --- | 
+|0 	|Paranoid 	|Used for IDS evasion. One port scanned at a time, with 5 minutes between probes|
+|1 	|Sneaky 	|Used for IDS evasion. One port scanned at a time, with 15 seconds between probes|
+|2 	|Polite 	|Uses less bandwith and resources. One port scanned at a time, with 0.4 seconds between probes|
+|3 	|Normal 	|Standard scan. Works locally and on the internet|
+|4 	|Aggressive 	|Fast scan. Parallel processing, with 10 milliseconds between probes|
+|5 	|Insane 	|Sacrificing accuracy for speed. Parallel processing, with 5ms minutes between probes|
+
 
 
