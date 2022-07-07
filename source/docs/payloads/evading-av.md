@@ -6,9 +6,18 @@ protections.
 
 Tools like Veil and MSFVenom may be useful for learning purposes in a lab context, but the most effective way to avoid 
 antivirus detection on a target machine in a real-life organisational context is to create customised payloads or 
-develop your own from scratch based on context of the pentesting/red teaming..
+develop your own from scratch based on context of the pentesting/red teaming.
 
-## Customised payloads
+## Modify payload code
+
+AV programs use database of signatures to detect malware. Modifying backdoor code will change its signature.
+
+* Open backdoor with text editor.
+* Make sure shellcode is not detected, if it is then change payload settings or use a different one.
+* Remove all arguments, add them one by one to identify the one triggering AV programs
+* Remove/modify detectable code.
+
+## Customise payload code
 
 For customisation, use Metasploit templates in the `data/templates/src` directory for DLLs, EXEs, and Windows Services.
 Plug in [exploit-db shellcodes](https://www.exploit-db.com/shellcodes) into the template. Or use `msfpayload` or 
@@ -19,9 +28,17 @@ Plug in [exploit-db shellcodes](https://www.exploit-db.com/shellcodes) into the 
 After compilation, check to see if the AV products running in the lab detect the bugger. If it gets detected start 
 playing with segments and other formats, etcetera.
 
-## Payloads from scratch
+## Modify hex values
 
-Note that creating a new payload or shellcode that creates a new signature that is not present in the antivirus tools 
+Some parts of the code may be doing nothing
+
+* Open file with hex editor.
+* Change values that don’t affect code execution.
+* Save and test the file.
+
+## Create payloads from scratch
+
+Note that creating a new payload or shellcode that creates a new signature that is not present in the antivirus' tools 
 database can still be effective but falls short on the new solutions that base their detection on heuristics 
 and behavioural analysis. Learn to write your own payloads in python from scratch:
 
