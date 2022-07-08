@@ -1,7 +1,7 @@
 # Notes on evading antivirus
 
 Whether delivering a payload through an application vulnerability exploit, or through social engineering, running code 
-on target machines is part of most penetration testing. That means bypassing [antivirus software](av.md) or other host-based 
+on target machines is part of most penetration testing. That means bypassing [antivirus software](av-windows.md) or other host-based 
 protections.
 
 ## Modify payload code

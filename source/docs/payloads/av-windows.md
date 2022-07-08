@@ -1,4 +1,4 @@
-# Antivirus
+# Windows antivirus
 
 Almost all AV applications employ multiple ways to block malware attacks. If one mechanism is bypassed, another may still block the malware. Some AV applications are designed to protect a single computer, others are specifically designed for servers or networks, but the underlying mechanisms of an AV remain mostly the same: It actively scans files that are introduced to a system, relying on a method to identify potentially hazardous files. This is called signature detection. And it attempts to identify suspicious behaviour on a system. This ranges from making suspicious registry entries, or adding items to a list that executes automatically on system startup. This approach is what helps protect against encrypted viruses, or viruses that are yet to be identified.
 
