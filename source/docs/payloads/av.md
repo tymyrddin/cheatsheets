@@ -29,8 +29,3 @@ Features of files are extracted from files, and then data mining and machine lea
 * Smart: An antivirus only scans selected files, that are more suspicious to be altered or infected.
 * On startup: A quick scan of the boot sectors and critical system files, instead of a full disk scan that takes a long time to finish, to catch boot sector viruses.
 
-## Meterpreter story of evasion engineering
-
-* [Engineering antivirus evasion](https://blog.scrt.ch/2020/06/19/engineering-antivirus-evasion/)
-* [Engineering antivirus evasion II](https://blog.scrt.ch/2020/07/15/engineering-antivirus-evasion-part-ii/)
-* [Engineering antivirus evasion III](https://blog.scrt.ch/2022/04/19/3432/)
