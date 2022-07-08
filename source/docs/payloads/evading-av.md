@@ -1,7 +1,7 @@
-# Evading Anti-Virus
+# Notes on evading antivirus
 
 Whether delivering a payload through an application vulnerability exploit, or through social engineering, running code 
-on target machines is part of most penetration testing. That means bypassing antivirus software or other host-based 
+on target machines is part of most penetration testing. That means bypassing [antivirus software](av.md) or other host-based 
 protections. 
 
 Tools like Veil and MSFVenom may be useful for learning purposes in a lab context, but the most effective way to avoid 
@@ -36,7 +36,7 @@ Some parts of the code may be doing nothing
 * Change values that don’t affect code execution.
 * Save and test the file.
 
-## Create payloads from scratch
+## Try creating payloads from scratch
 
 Note that creating a new payload or shellcode that creates a new signature that is not present in the antivirus' tools 
 database can still be effective but falls short on the new solutions that base their detection on heuristics 
