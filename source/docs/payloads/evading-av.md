@@ -51,7 +51,3 @@ In general:
 > Treat this as a learning exercise. Find out why the world is not as you thought it was. Assemble the facts, digest 
 > the information, consider the implications. THEN go postal. But with precision.” ― Terry Pratchett, Thud!
 
-## Resources
-
-* [Basic Anti-Virus Evasion](https://kf0k.github.io/blog/Posts/basic_av_evasion/)
-* [Pentesting Methodology - Antivirus Evasion ](https://blog.r0kithax.com/pentesting/infosec/2021/02/08/av-evasion.html)
