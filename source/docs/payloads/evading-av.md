@@ -1,12 +1,8 @@
-# Notes on evading antivirus
+# Notes on evading Anti-Virus
 
 Whether delivering a payload through an application vulnerability exploit, or through social engineering, running code 
-on target machines is part of most penetration testing. That means bypassing [antivirus software](av.md) or other host-based 
-protections. 
-
-Tools like Veil and MSFVenom may be useful for learning purposes in a lab context, but the most effective way to avoid 
-antivirus detection on a target machine in a real-life organisational context is to create customised payloads or 
-develop your own from scratch based on context of the pentesting/red teaming.
+on target machines is part of most penetration testing. That means bypassing [Anti-Virus software](av.md) or other host-based 
+protections.
 
 ## Modify payload code
 
@@ -38,7 +34,7 @@ Some parts of the code may be doing nothing
 
 ## Try creating payloads from scratch
 
-Note that creating a new payload or shellcode that creates a new signature that is not present in the antivirus' tools 
+Note that creating a new payload or shellcode that creates a new signature that is not present in the Anti-Virus' tools 
 database can still be effective but falls short on the new solutions that base their detection on heuristics 
 and behavioural analysis. Learn to write your own payloads in python from scratch:
 
@@ -49,8 +45,13 @@ In general:
 
 * Don't develop for avoiding all AV. Include finding out what protections the target uses in reconnaisance.
 * Keep it as simple as possible. 
-* Perhaps just enough to get in, disable antivirus, and then move in with more-featured tools?
+* Perhaps just enough to get in, disable Anti-Virus, and then move in with more-featured tools?
 
 > “The important thing is not to shout at this point, Vimes told himself. Do not…what do they call it…go postal? 
 > Treat this as a learning exercise. Find out why the world is not as you thought it was. Assemble the facts, digest 
-> the information, consider the implications. THEN go postal. But with precision.” ― Terry Pratchett, Thud! 
+> the information, consider the implications. THEN go postal. But with precision.” ― Terry Pratchett, Thud!
+
+## Resources
+
+* [Basic Anti-Virus Evasion](https://kf0k.github.io/blog/Posts/basic_av_evasion/)
+* [Pentesting Methodology - Antivirus Evasion ](https://blog.r0kithax.com/pentesting/infosec/2021/02/08/av-evasion.html)
