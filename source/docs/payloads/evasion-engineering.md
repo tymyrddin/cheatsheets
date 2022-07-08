@@ -2,7 +2,7 @@
 
 ## Windows basics
 
-* [Basic Anti-Virus Evasion](https://kf0k.github.io/blog/Posts/basic_av_evasion/)
+* [Basic antivirus Evasion](https://kf0k.github.io/blog/Posts/basic_av_evasion/)
 * [Pentesting Methodology - Antivirus Evasion ](https://blog.r0kithax.com/pentesting/infosec/2021/02/08/av-evasion.html)
 
 ## Meterpreter story

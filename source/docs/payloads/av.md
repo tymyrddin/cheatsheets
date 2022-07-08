@@ -1,4 +1,4 @@
-# Anti-Virus
+# Antivirus
 
 Almost all AV applications employ multiple ways to block malware attacks. If one mechanism is bypassed, another may still block the malware. Some AV applications are designed to protect a single computer, others are specifically designed for servers or networks, but the underlying mechanisms of an AV remain mostly the same: It actively scans files that are introduced to a system, relying on a method to identify potentially hazardous files. This is called signature detection. And it attempts to identify suspicious behaviour on a system. This ranges from making suspicious registry entries, or adding items to a list that executes automatically on system startup. This approach is what helps protect against encrypted viruses, or viruses that are yet to be identified.
 
@@ -12,7 +12,7 @@ A heuristic detection allows a scanner to detect viruses even when they are padd
 
 ## Behavioural blocking
 
-This is a signatureless approach to detection that helps the program build a full context around every process execution path in real time, and identify the stealthier, more advanced malware threats. Suspicious behavior includes unpacking of malicious code, modifying the host files, or observing keystrokes. Noticing actions like these allows an Anti-Virus program to detect previously unseen malware on a system.
+This is a signatureless approach to detection that helps the program build a full context around every process execution path in real time, and identify the stealthier, more advanced malware threats. Suspicious behavior includes unpacking of malicious code, modifying the host files, or observing keystrokes. Noticing actions like these allows an antivirus application to detect previously unseen malware on a system.
 
 ## Sandbox detection
 
@@ -24,8 +24,8 @@ Features of files are extracted from files, and then data mining and machine lea
 
 ## Types of scans
 
-* On demand: A conventional scan is either run when the user requests it, or at a scheduled instance that the Anti-Virus sets up. This type of scan searches the contents of the disks, directories and files, as well as boot sectors and system components. 
+* On demand: A conventional scan is either run when the user requests it, or at a scheduled instance that the antivirus application sets up. This type of scan searches the contents of the disks, directories and files, as well as boot sectors and system components. 
 * Real time: The system is monitored for any suspicious activity in real time, when data is loaded into the active memory.
-* Smart: An Anti-Virus only scans selected files, that are more suspicious to be altered or infected.
+* Smart: An antivirus application only scans selected files, that are more suspicious to be altered or infected.
 * On startup: A quick scan of the boot sectors and critical system files, instead of a full disk scan that takes a long time to finish, to catch boot sector viruses.
 

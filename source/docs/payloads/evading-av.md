@@ -1,7 +1,7 @@
-# Notes on evading Anti-Virus
+# Notes on evading antivirus
 
 Whether delivering a payload through an application vulnerability exploit, or through social engineering, running code 
-on target machines is part of most penetration testing. That means bypassing [Anti-Virus software](av.md) or other host-based 
+on target machines is part of most penetration testing. That means bypassing [antivirus software](av.md) or other host-based 
 protections.
 
 ## Modify payload code
@@ -34,7 +34,7 @@ Some parts of the code may be doing nothing
 
 ## Try creating payloads from scratch
 
-Note that creating a new payload or shellcode that creates a new signature that is not present in the Anti-Virus' tools 
+Note that creating a new payload or shellcode that creates a new signature that is not present in the antivirus' tools 
 database can still be effective but falls short on the new solutions that base their detection on heuristics 
 and behavioural analysis. Learn to write your own payloads in python from scratch:
 
@@ -45,7 +45,7 @@ In general:
 
 * Don't develop for avoiding all AV. Include finding out what protections the target uses in reconnaisance.
 * Keep it as simple as possible. 
-* Perhaps just enough to get in, disable Anti-Virus, and then move in with more-featured tools?
+* Perhaps just enough to get in, disable antivirus, and then move in with more-featured tools?
 
 > “The important thing is not to shout at this point, Vimes told himself. Do not…what do they call it…go postal? 
 > Treat this as a learning exercise. Find out why the world is not as you thought it was. Assemble the facts, digest 
