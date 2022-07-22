@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Port scanning cheatsheet &mdash; Cheatsheets</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Traceroute cheatsheet" href="Traceroute-cheatsheet.html" />
+    <link rel="prev" title="Port scanning cheatsheet" href="Port-scanning-cheatsheet.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Cheatsheets
+            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Stealth</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../stealth/hide-your-tracks.html">Hide your tracks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stealth/scanning-stealth.html">Stealth while scanning</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Linux</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../linux/iproute2.html">iproute2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/kernel-modules.html">Kernel modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/log-commands.html">log commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/lsof.html">lsof</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reconnaissance</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../reconnaissance/DNS-registrars.html">DNS registrars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reconnaissance/Search-public-information.html">Search for public information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reconnaissance/Shodan-CLI-cheatsheet.html">Shodan CLI cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reconnaissance/Shodan-cheatsheet.html">Shodan cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reconnaissance/Wardriving-links.html">WarDriving links</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Scanning</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="IKE-scan-cheatsheet.html">IKE-scan cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Nessus-cheatsheet.html">Nessus cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Nikto-cheatsheet.html">Nikto cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Nmap-cheatsheet.html">NMap cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Port-scanning-cheatsheet.html">Port scanning cheatsheet</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Port scanning cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Traceroute-cheatsheet.html">Traceroute cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unicornscan-cheatsheet.html">Unicornscan cheatsheet</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Enumeration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../enumeration/databases.html">MySQL enumeration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enumeration/exploits-dbs.html">Exploits databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enumeration/linux-post.html">Linux post exploitation enumeration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enumeration/windows.html">Windows enumeration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enumeration/windows-post.html">Windows post exploitation enumeration</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Application</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../application/csrf.html">CSRF Attack vectors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../application/lfi.html">Local file inclusion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../application/reverse-shell-commands.html">Reverse shell commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../application/rfi.html">Remote file inclusion</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Databases</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../databases/brute-force.html">Brute-force databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/comments.html">Comment syntax</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/escape-context.html">Escape context</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/mysql-commands.html">MySQL commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/number-of-columns.html">Detect number of columns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/postgresql-commands.html">PostgreSQL commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/sqli-tips.html">SQLi tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/sqlmap-cheatsheet.html">SQLMap cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/union-select.html">Union SQLi queries</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Payloads</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../payloads/av-linux.html">Linux antivirus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../payloads/av-windows.html">Windows antivirus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../payloads/evasion-av.html">AV evasion engineering examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../payloads/evasion-ids.html">IDS/IPS Evasion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../payloads/redirecting.html">Redirecting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../payloads/shells.html">Shells</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../payloads/weevely.html">Weevely</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Cheatsheets</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Port scanning cheatsheet</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/docs/scanning/Ports-cheatsheet.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="port-scanning-cheatsheet">
+<h1>Port scanning cheatsheet<a class="headerlink" href="#port-scanning-cheatsheet" title="Permalink to this heading"></a></h1>
+<p>The <a class="reference external" href="https://www.speedguide.net/ports.php">Ports Database</a> is a comprehensive, searchable database of official and unofficial tcp/udp port assignments, known vulnerabilities, trojans, applications use and more.</p>
+<ul class="simple">
+<li><p>System Ports (0-1023)</p></li>
+<li><p>User Ports (1024-49151)</p></li>
+<li><p>Dynamic / Private Ports (49152-65535)</p></li>
+</ul>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="left">TCP/UDP Ports</th>
+<th align="left">Service Description</th>
+<th align="left">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">0</td>
+<td align="left"></td>
+<td align="left">Reserved port</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=7">7</a></td>
+<td align="left">Echo</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=19">19</a></td>
+<td align="left">Chargen</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=20">20</a> - <a href="https://www.speedguide.net/port.php?port=21">21</a></td>
+<td align="left">FTP</td>
+<td align="left">Most common</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=22">22</a></td>
+<td align="left">SSH/SCP</td>
+<td align="left">Most common</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=23">23</a></td>
+<td align="left">Telnet</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=25">25</a></td>
+<td align="left">SMTP</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=42">42</a></td>
+<td align="left">WINS Replication</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=43">43</a></td>
+<td align="left">WHOIS</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=49">49</a></td>
+<td align="left">TACACS</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=53">53</a></td>
+<td align="left">DNS</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=67">67</a> - <a href="https://www.speedguide.net/port.php?port=68">68</a></td>
+<td align="left">DHCP/BOOTP</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=69">69</a></td>
+<td align="left">TFTP</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=70">70</a></td>
+<td align="left">Gopher</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=79">79</a></td>
+<td align="left">Finger</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=80">80</a></td>
+<td align="left">HTTP</td>
+<td align="left">Most common</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=88">88</a></td>
+<td align="left">Kerberos</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=102">102</a></td>
+<td align="left">MS</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=110">110</a></td>
+<td align="left">POP3</td>
+<td align="left">Most common</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=113">113</a></td>
+<td align="left">Ident</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=119">119</a></td>
+<td align="left">NNTP (Usenet)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=123">123</a></td>
+<td align="left">NTP</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=135">135</a></td>
+<td align="left">Microsoft RPC</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=137">137</a> - <a href="https://www.speedguide.net/port.php?port=139">139</a></td>
+<td align="left">NetBIOS</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=143">143</a></td>
+<td align="left">IMAP4</td>
+<td align="left">Most common</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=161">161</a> - <a href="https://www.speedguide.net/port.php?port=162">162</a></td>
+<td align="left">SNMP</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=177">177</a></td>
+<td align="left">XDMCP</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=179">179</a></td>
+<td align="left">BGP</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=201">201</a></td>
+<td align="left">AppleTalk</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=264">264</a></td>
+<td align="left">BGMP</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=318">318</a></td>
+<td align="left">TSP</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=381">381</a> - <a href="https://www.speedguide.net/port.php?port=383">383</a></td>
+<td align="left">HP Openview</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=389">389</a></td>
+<td align="left">LDAP</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=411">411</a> - <a href="https://www.speedguide.net/port.php?port=412">412</a></td>
+<td align="left">Direct Connect</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=443">443</a></td>
+<td align="left">HTTP over SSL</td>
+<td align="left">The standard port for all secured HTTP traffic.</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=445">445</a></td>
+<td align="left">Microsoft DS</td>
+<td align="left">Used for direct TCP/IP MS Networking access without the need for a NetBIOS layer (windows machines). Block to prevent internal spreading of ransomware. If file and printer sharing are required, leave open on some internal firewalls.</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=464">464</a></td>
+<td align="left">Kerberos</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=465">465</a></td>
+<td align="left">SMTP over SSL</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=497">497</a></td>
+<td align="left">Retrospect</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=500">500</a></td>
+<td align="left">ISAKMP</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=512">512</a></td>
+<td align="left">rexec</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=513">513</a></td>
+<td align="left">rlogin</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=514">514</a></td>
+<td align="left">syslog</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=515">515</a></td>
+<td align="left">LPD/LPR</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=520">520</a></td>
+<td align="left">RIP</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=521">521</a></td>
+<td align="left">RIPng (IPv6)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=540">540</a></td>
+<td align="left">UUCP</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=554">554</a></td>
+<td align="left">RTSP</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=546">546</a> - <a href="https://www.speedguide.net/port.php?port=547">547</a></td>
+<td align="left">DHCPv6</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=560">560</a></td>
+<td align="left">rmonitor</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=563">563</a></td>
+<td align="left">NNTP OVER SSL</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=587">587</a></td>
+<td align="left">SMTP</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=591">591</a></td>
+<td align="left">FileMaker</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=593">593</a></td>
+<td align="left">Microsoft DCOM</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=631">631</a></td>
+<td align="left">Internet Printing</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=636">636</a></td>
+<td align="left">LDAP OVER SSL</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=639">639</a></td>
+<td align="left">MSDP (PIM)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=646">646</a></td>
+<td align="left">LDP (MPLS)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=691">691</a></td>
+<td align="left">MS Exchange</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=860">860</a></td>
+<td align="left">iSCSI</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=873">873</a></td>
+<td align="left">rsync</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=902">902</a></td>
+<td align="left">VMware Server</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=989">989</a> - <a href="https://www.speedguide.net/port.php?port=513">990</a></td>
+<td align="left">FTP OVER SSL</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=993">993</a></td>
+<td align="left">IMAP4 OVER SSL</td>
+<td align="left">Most common</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=995">995</a></td>
+<td align="left">POP3 OVER SSL</td>
+<td align="left">Most common</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=1025">1025</a></td>
+<td align="left">Microsoft RPC</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=1026">1026</a> - <a href="https://www.speedguide.net/port.php?port=1029">1029</a></td>
+<td align="left">Windows Messenger</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=1080">1080</a></td>
+<td align="left">SOCKS PROXY and MyDoom</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=1194">1194</a></td>
+<td align="left">OpenVPN</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=1214">1214</a></td>
+<td align="left">KAZAA</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=1241">1241</a></td>
+<td align="left">Nessus</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=1311">1311</a></td>
+<td align="left">Dell OpenManage</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=1337">1337</a></td>
+<td align="left">WASTE</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=1433">1433</a> - <a href="https://www.speedguide.net/port.php?port=1434">1434</a></td>
+<td align="left">Microsoft SQL</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=1512">1512</a></td>
+<td align="left">WINS</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=1589">1589</a></td>
+<td align="left">Cisco VQP</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=1701">1701</a></td>
+<td align="left">L2TP</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=1723">1723</a></td>
+<td align="left">MS PPTP</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=1725">1725</a></td>
+<td align="left">STEAM</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=1741">1741</a></td>
+<td align="left">CiscoWorks 2000</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=1755">1755</a></td>
+<td align="left">MS MEDIA SERVER</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=1812">1812</a> - <a href="https://www.speedguide.net/port.php?port=513">1813</a></td>
+<td align="left">RADIUS</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=1863">1863</a></td>
+<td align="left">MSN</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=1985">1985</a></td>
+<td align="left">Cisco HSRP</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=2000">2000</a></td>
+<td align="left">Cisco SCCP</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=2002">2002</a></td>
+<td align="left">Cisco ACS</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=2049">2049</a></td>
+<td align="left">NFS</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=2082">2082</a> - <a href="https://www.speedguide.net/port.php?port=513">2083</a></td>
+<td align="left">cPanel</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=2100">2100</a></td>
+<td align="left">Oracle XDB</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=2222">2222</a></td>
+<td align="left">DirectAdmin</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=2302">2302</a></td>
+<td align="left">HALO</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=2483">2483</a> - <a href="https://www.speedguide.net/port.php?port=2484">2484</a></td>
+<td align="left">Oracle DB</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=2745">2745</a></td>
+<td align="left">Bagle.H</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=2967">2967</a></td>
+<td align="left">Symantec AV</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=3050">3050</a></td>
+<td align="left">Interbase DB</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=3074">3074</a></td>
+<td align="left">XBOX Live</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=3124">3124</a></td>
+<td align="left">HTTP Proxy</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=3127">3127</a></td>
+<td align="left">MyDoom</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=3128">3128</a></td>
+<td align="left">HTTP Proxy</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=3222">3222</a></td>
+<td align="left">GLBP</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=3260">3260</a></td>
+<td align="left">iSCSI Target</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=3306">3306</a></td>
+<td align="left">MySQL</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=3389">3389</a></td>
+<td align="left">Terminal Server</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=3689">3689</a></td>
+<td align="left">iTunes</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=3690">3690</a></td>
+<td align="left">Subversion</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=3724">3724</a></td>
+<td align="left">World of Warcraft</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=3784">3784</a> - <a href="https://www.speedguide.net/port.php?port=3785">3785</a></td>
+<td align="left">Ventrilo</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=4333">4333</a></td>
+<td align="left">mSQL</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=4444">4444</a></td>
+<td align="left">Blaster</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=4664">4664</a></td>
+<td align="left">Google Desktop</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=4672">4672</a></td>
+<td align="left">eMule</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=4899">4899</a></td>
+<td align="left">Radmin</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=5000">5000</a></td>
+<td align="left">UPnP</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=5001">5001</a></td>
+<td align="left">Slingbox &amp; Iperf</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=5004">5004</a> - <a href="https://www.speedguide.net/port.php?port=5005">5005</a></td>
+<td align="left">RTP</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=5050">5050</a></td>
+<td align="left">Yahoo! Messenger</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=5060">5060</a></td>
+<td align="left">SIP</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=5190">5190</a></td>
+<td align="left">AIM/ICQ</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=5222">5222</a> - <a href="https://www.speedguide.net/port.php?port=5223">5223</a></td>
+<td align="left">XMPP/Jabber</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=5432">5432</a></td>
+<td align="left">PostgreSQL</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=5500">5500</a></td>
+<td align="left">VNC Server</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=5554">5554</a></td>
+<td align="left">Sasser</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=5631">5631</a> - <a href="https://www.speedguide.net/port.php?port=5632">5632</a></td>
+<td align="left">pcAnywhere</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=5800">5800</a></td>
+<td align="left">VNC over HTTP</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=5900">5900+</a></td>
+<td align="left">VNC Server</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=6000">6000</a> - <a href="https://www.speedguide.net/port.php?port=6001">6001</a></td>
+<td align="left">X11</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=6112">6112</a></td>
+<td align="left">Battle.net</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=6129">6129</a></td>
+<td align="left">DameWare</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=6257">6257</a></td>
+<td align="left">WinMX</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=6346">6346</a> - <a href="https://www.speedguide.net/port.php?port=6347">6347</a></td>
+<td align="left">Gnutella</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=6500">6500</a></td>
+<td align="left">GameSpy Arcade</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=6566">6566</a></td>
+<td align="left">SANE</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=6588">6588</a></td>
+<td align="left">AnalogX</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=6665">6665</a> - <a href="https://www.speedguide.net/port.php?port=6669">6669</a></td>
+<td align="left">IRC</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=6679">6679</a> and <a href="https://www.speedguide.net/port.php?port=6697">6697</a></td>
+<td align="left">IRC over SSL</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=6699">6699</a></td>
+<td align="left">Napster</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=6881">6881</a> - <a href="https://www.speedguide.net/port.php?port=6999">6999</a></td>
+<td align="left">BitTorrent</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=6891">6891</a> - <a href="https://www.speedguide.net/port.php?port=6901">6901</a></td>
+<td align="left">Windows Live</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=6970">6970</a></td>
+<td align="left">Quicktime</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=7212">7212</a></td>
+<td align="left">GhostSurf</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=7648">7648</a> - <a href="https://www.speedguide.net/port.php?port=7649">7649</a></td>
+<td align="left">CU-SeeMe</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=8000">8000</a></td>
+<td align="left">Internet Radio</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=8080">8080</a></td>
+<td align="left">HTTP Proxy</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=8086">8086</a> - <a href="https://www.speedguide.net/port.php?port=8087">8087</a></td>
+<td align="left">Kaspersky AV</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=8118">8118</a></td>
+<td align="left">Privoxy</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=8200">8200</a></td>
+<td align="left">VMware Server</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=8500">8500</a></td>
+<td align="left">Adobe ColdFusion</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=8767">8767</a></td>
+<td align="left">TeamSpeak</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=8866">8866</a></td>
+<td align="left">Bagle.B</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=9100">9100</a></td>
+<td align="left">HP JetDirect</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=9101">9101</a> - <a href="https://www.speedguide.net/port.php?port=9103">9103</a></td>
+<td align="left">Bacula</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=9119">9119</a></td>
+<td align="left">MXit</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=9800">9800</a></td>
+<td align="left">WebDAV</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=9898">9898</a></td>
+<td align="left">Dabber</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=9988">9988</a></td>
+<td align="left">Rbot/Spybot</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=9999">9999</a></td>
+<td align="left">Urchin</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=10000">10000</a></td>
+<td align="left">Webmin</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=10000">10000</a></td>
+<td align="left">BackupExec</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=10113">10113</a> - <a href="https://www.speedguide.net/port.php?port=10116">10116</a></td>
+<td align="left">NetIQ</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=11371">11371</a></td>
+<td align="left">OpenPGP</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=12035">12035</a> - <a href="https://www.speedguide.net/port.php?port=12036">12036</a></td>
+<td align="left">Second Life</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=12345">12345</a></td>
+<td align="left">NetBus</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=13720">13720</a> - <a href="https://www.speedguide.net/port.php?port=13721">13721</a></td>
+<td align="left">NetBackup</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=14567">14567</a></td>
+<td align="left">Battlefield</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=15118">15118</a></td>
+<td align="left">Dipnet/Oddbob</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=19226">19226</a></td>
+<td align="left">AdminSecure</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=19638">19638</a></td>
+<td align="left">Ensim</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=20000">20000</a></td>
+<td align="left">Usermin</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=24800">24800</a></td>
+<td align="left">Synergy</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=25999">25999</a></td>
+<td align="left">Xfire</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=27015">27015</a></td>
+<td align="left">Half-Life</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=27374">27374</a></td>
+<td align="left">Sub7</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=28960">28960</a></td>
+<td align="left">Call of Duty</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=31337">31337</a></td>
+<td align="left">Back Orifice</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.speedguide.net/port.php?port=33434">33434+</a></td>
+<td align="left">traceroute</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Port-scanning-cheatsheet.html" class="btn btn-neutral float-left" title="Port scanning cheatsheet" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Traceroute-cheatsheet.html" class="btn btn-neutral float-right" title="Traceroute cheatsheet" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+        <a href="https://unseen-uni.netlify.app/">Unseen University</a>, 2022
+
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

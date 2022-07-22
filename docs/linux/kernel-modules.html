@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kernel modules &mdash; Cheatsheets</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="log commands" href="log-commands.html" />
+    <link rel="prev" title="iproute2" href="iproute2.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Cheatsheets
+            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Stealth</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../stealth/hide-your-tracks.html">Hide your tracks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stealth/scanning-stealth.html">Stealth while scanning</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Linux</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="iproute2.html">iproute2</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Kernel modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="log-commands.html">log commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lsof.html">lsof</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reconnaissance</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../reconnaissance/DNS-registrars.html">DNS registrars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reconnaissance/Search-public-information.html">Search for public information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reconnaissance/Shodan-CLI-cheatsheet.html">Shodan CLI cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reconnaissance/Shodan-cheatsheet.html">Shodan cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reconnaissance/Wardriving-links.html">WarDriving links</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Scanning</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../scanning/IKE-scan-cheatsheet.html">IKE-scan cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scanning/Nessus-cheatsheet.html">Nessus cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scanning/Nikto-cheatsheet.html">Nikto cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scanning/Nmap-cheatsheet.html">NMap cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scanning/Port-scanning-cheatsheet.html">Port scanning cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scanning/Ports-cheatsheet.html">Port scanning cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scanning/Traceroute-cheatsheet.html">Traceroute cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scanning/Unicornscan-cheatsheet.html">Unicornscan cheatsheet</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Enumeration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../enumeration/databases.html">MySQL enumeration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enumeration/exploits-dbs.html">Exploits databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enumeration/linux-post.html">Linux post exploitation enumeration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enumeration/windows.html">Windows enumeration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enumeration/windows-post.html">Windows post exploitation enumeration</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Application</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../application/csrf.html">CSRF Attack vectors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../application/lfi.html">Local file inclusion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../application/reverse-shell-commands.html">Reverse shell commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../application/rfi.html">Remote file inclusion</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Databases</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../databases/brute-force.html">Brute-force databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/comments.html">Comment syntax</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/escape-context.html">Escape context</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/mysql-commands.html">MySQL commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/number-of-columns.html">Detect number of columns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/postgresql-commands.html">PostgreSQL commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/sqli-tips.html">SQLi tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/sqlmap-cheatsheet.html">SQLMap cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/union-select.html">Union SQLi queries</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Payloads</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../payloads/av-linux.html">Linux antivirus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../payloads/av-windows.html">Windows antivirus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../payloads/evasion-av.html">AV evasion engineering examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../payloads/evasion-ids.html">IDS/IPS Evasion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../payloads/redirecting.html">Redirecting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../payloads/shells.html">Shells</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../payloads/weevely.html">Weevely</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Cheatsheets</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Kernel modules</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/docs/linux/kernel-modules.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="kernel-modules">
+<h1>Kernel modules<a class="headerlink" href="#kernel-modules" title="Permalink to this heading"></a></h1>
+<section id="getting-info">
+<h2>Getting info<a class="headerlink" href="#getting-info" title="Permalink to this heading"></a></h2>
+<p>What kernel modules are currently loaded:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ lsmod
+</pre></div>
+</div>
+<p>About a specific module:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ sudo modinfo [module_name]
+</pre></div>
+</div>
+<p>Configuration of all the modules:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ sudo modprobe -c | less
+</pre></div>
+</div>
+<p>Configuration of a particular module:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ sudo modprobe -c | grep [module_name]
+</pre></div>
+</div>
+<p>Listing dependencies of a module (or alias), including the module itself:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ sudo modprobe --show-depends [module_name]
+</pre></div>
+</div>
+<p>Manual loading and unloading</p>
+<p>To load a module:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># modprobe [modulename]
+</pre></div>
+</div>
+<p>To unload a module:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># modprobe -r [modulename]
+</pre></div>
+</div>
+</section>
+<section id="blacklisting">
+<h2>Blacklisting<a class="headerlink" href="#blacklisting" title="Permalink to this heading"></a></h2>
+<p>Blacklisting is a mechanism to prevent a kernel module from loading. This could be useful if, for example, the associated hardware is not needed, or if loading that module causes problems: for instance there may be two kernel modules that try to control the same piece of hardware, and loading them together would result in a conflict.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="iproute2.html" class="btn btn-neutral float-left" title="iproute2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="log-commands.html" class="btn btn-neutral float-right" title="log commands" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+        <a href="https://unseen-uni.netlify.app/">Unseen University</a>, 2022
+
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

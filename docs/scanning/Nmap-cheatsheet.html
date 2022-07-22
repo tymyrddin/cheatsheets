@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NMap cheatsheet &mdash; Cheatsheets</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Port scanning cheatsheet" href="Port-scanning-cheatsheet.html" />
+    <link rel="prev" title="Nikto cheatsheet" href="Nikto-cheatsheet.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Cheatsheets
+            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Stealth</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../stealth/hide-your-tracks.html">Hide your tracks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stealth/scanning-stealth.html">Stealth while scanning</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Linux</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../linux/iproute2.html">iproute2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/kernel-modules.html">Kernel modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/log-commands.html">log commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/lsof.html">lsof</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reconnaissance</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../reconnaissance/DNS-registrars.html">DNS registrars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reconnaissance/Search-public-information.html">Search for public information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reconnaissance/Shodan-CLI-cheatsheet.html">Shodan CLI cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reconnaissance/Shodan-cheatsheet.html">Shodan cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reconnaissance/Wardriving-links.html">WarDriving links</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Scanning</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="IKE-scan-cheatsheet.html">IKE-scan cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Nessus-cheatsheet.html">Nessus cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Nikto-cheatsheet.html">Nikto cheatsheet</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">NMap cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Port-scanning-cheatsheet.html">Port scanning cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ports-cheatsheet.html">Port scanning cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Traceroute-cheatsheet.html">Traceroute cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unicornscan-cheatsheet.html">Unicornscan cheatsheet</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Enumeration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../enumeration/databases.html">MySQL enumeration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enumeration/exploits-dbs.html">Exploits databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enumeration/linux-post.html">Linux post exploitation enumeration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enumeration/windows.html">Windows enumeration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enumeration/windows-post.html">Windows post exploitation enumeration</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Application</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../application/csrf.html">CSRF Attack vectors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../application/lfi.html">Local file inclusion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../application/reverse-shell-commands.html">Reverse shell commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../application/rfi.html">Remote file inclusion</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Databases</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../databases/brute-force.html">Brute-force databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/comments.html">Comment syntax</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/escape-context.html">Escape context</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/mysql-commands.html">MySQL commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/number-of-columns.html">Detect number of columns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/postgresql-commands.html">PostgreSQL commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/sqli-tips.html">SQLi tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/sqlmap-cheatsheet.html">SQLMap cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../databases/union-select.html">Union SQLi queries</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Payloads</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../payloads/av-linux.html">Linux antivirus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../payloads/av-windows.html">Windows antivirus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../payloads/evasion-av.html">AV evasion engineering examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../payloads/evasion-ids.html">IDS/IPS Evasion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../payloads/redirecting.html">Redirecting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../payloads/shells.html">Shells</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../payloads/weevely.html">Weevely</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Cheatsheets</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>NMap cheatsheet</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/docs/scanning/Nmap-cheatsheet.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="nmap-cheatsheet">
+<h1>NMap cheatsheet<a class="headerlink" href="#nmap-cheatsheet" title="Permalink to this heading"></a></h1>
+<section id="basic-scanning-techniques">
+<h2>Basic scanning techniques<a class="headerlink" href="#basic-scanning-techniques" title="Permalink to this heading"></a></h2>
+<p>Scan a Single Target</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap [target]
+</pre></div>
+</div>
+<p>Scan Multiple Targets</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap [target1, target2, etc]
+</pre></div>
+</div>
+<p>Scan a List of Targets</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -iL [list.txt]
+</pre></div>
+</div>
+<p>Scan a Range of Hosts</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap [range of ip addresses]
+</pre></div>
+</div>
+<p>Scan an Entire Subnet</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap [ip address/cdir]
+</pre></div>
+</div>
+<p>Scan Random Hosts</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -iR [number]
+</pre></div>
+</div>
+<p>Excluding Targets from a Scan</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap [targets] --exclude [targets]
+</pre></div>
+</div>
+<p>Excluding Targets Using a List</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap [targets] --excludefile [list.txt]
+</pre></div>
+</div>
+<p>Perform an Aggressive Scan</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -A [target]
+</pre></div>
+</div>
+<p>Scan an IPv6 Target</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -6 [target]
+</pre></div>
+</div>
+<p>…</p>
+</section>
+<section id="discovery-options">
+<h2>Discovery options<a class="headerlink" href="#discovery-options" title="Permalink to this heading"></a></h2>
+<p>Perform a Ping Only Scan</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -sP [target]
+</pre></div>
+</div>
+<p>Don’t Ping</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -PN [target]
+</pre></div>
+</div>
+<p>TCP SYN Ping</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -PS [target]
+</pre></div>
+</div>
+<p>TCP ACK Ping</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -PA [target]
+</pre></div>
+</div>
+<p>UDP Ping</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -PU [target]
+</pre></div>
+</div>
+<p>SCTP INIT Ping</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -PY [target]
+</pre></div>
+</div>
+<p>ICMP Echo Ping</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -PE [target]
+</pre></div>
+</div>
+<p>ICMP Timestamp Ping</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -PP [target]
+</pre></div>
+</div>
+<p>ICMP Address Mask Ping</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -PM [target]
+</pre></div>
+</div>
+<p>IP Protocol Ping
+# nmap -PO [target]</p>
+<p>ARP Ping</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -PR [target]
+</pre></div>
+</div>
+<p>Traceroute</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --traceroute [target]
+</pre></div>
+</div>
+<p>Force Reverse DNS Resolution</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -R [target]
+</pre></div>
+</div>
+<p>Disable Reverse DNS Resolution</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -n [target]
+</pre></div>
+</div>
+<p>Alternative DNS Lookup</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --system-dns [target]
+</pre></div>
+</div>
+<p>Manually Specify DNS Server(s)</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --dns-servers [servers] [target]
+</pre></div>
+</div>
+<p>Create a Host List</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -sL [targets]
+</pre></div>
+</div>
+</section>
+<section id="advanced-scanning-functions">
+<h2>Advanced scanning functions<a class="headerlink" href="#advanced-scanning-functions" title="Permalink to this heading"></a></h2>
+<p>TCP SYN Scan</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -sS [target]
+</pre></div>
+</div>
+<p>TCP Connect Scan</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -sT [target]
+</pre></div>
+</div>
+<p>UDP Scan</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -sU [target]
+</pre></div>
+</div>
+<p>TCP NULL Scan</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -sN [target]
+</pre></div>
+</div>
+<p>TCP FIN Scan</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -sF [target]
+</pre></div>
+</div>
+<p>Xmas Scan</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -sX [target]
+</pre></div>
+</div>
+<p>TCP ACK Scan</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -sA [target]
+</pre></div>
+</div>
+<p>Custom TCP Scan</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --scanflags [flags] [target]
+</pre></div>
+</div>
+<p>IP Protocol Scan</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -sO [target]
+</pre></div>
+</div>
+<p>Send Raw Ethernet Packets</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --send-eth [target]
+</pre></div>
+</div>
+<p>Send IP Packets</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --send-ip [target]
+</pre></div>
+</div>
+</section>
+<section id="port-scanning-options">
+<h2>Port scanning options<a class="headerlink" href="#port-scanning-options" title="Permalink to this heading"></a></h2>
+<p>Perform a Fast Scan</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -F [target]
+</pre></div>
+</div>
+<p>Scan Specific Ports</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -p [port(s)] [target]
+</pre></div>
+</div>
+<p>Scan Ports by Name</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -p [port name(s)] [target]
+</pre></div>
+</div>
+<p>Scan Ports by Protocol</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -sU -sT -p U:[ports],T:[ports] [target]
+</pre></div>
+</div>
+<p>Scan All Ports</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -p &quot;*&quot; [target]
+</pre></div>
+</div>
+<p>Scan Top Ports</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --top-ports [number] [target]
+</pre></div>
+</div>
+<p>Perform a Sequential Port Scan</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -r [target]
+</pre></div>
+</div>
+</section>
+<section id="version-detection">
+<h2>Version detection<a class="headerlink" href="#version-detection" title="Permalink to this heading"></a></h2>
+<p>Operating System Detection</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -O [target]
+</pre></div>
+</div>
+<p>Submit  TCP/IP Fingerprints</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># www.nmap.org/submit/
+</pre></div>
+</div>
+<p>Attempt to Guess an Unknown OS</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -O --osscan-guess [target]
+</pre></div>
+</div>
+<p>Service Version Detection</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -sV  [target]
+</pre></div>
+</div>
+<p>Troubleshooting Version Scans</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -sV --version-trace [target]
+</pre></div>
+</div>
+<p>Perform a RPC Scan</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -sR [target]
+</pre></div>
+</div>
+</section>
+<section id="timing-options">
+<h2>Timing options<a class="headerlink" href="#timing-options" title="Permalink to this heading"></a></h2>
+<p>Timing Templates</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -T[0-5] [target]
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Template number</th>
+<th>Template name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Paranoid</td>
+<td>Used for IDS evasion. One port scanned at a time, with 5 minutes between probes</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Sneaky</td>
+<td>Used for IDS evasion. One port scanned at a time, with 15 seconds between probes</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Polite</td>
+<td>Uses less bandwith and resources. One port scanned at a time, with 0.4 seconds between probes</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Normal</td>
+<td>Standard scan. Works locally and on the internet</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Aggressive</td>
+<td>Fast scan. Parallel processing, with 10 milliseconds between probes</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Insane</td>
+<td>Sacrificing accuracy for speed. Parallel processing, with 5ms minutes between probes</td>
+</tr>
+</tbody>
+</table>
+<p>Set the Packet TTL</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --ttl [time] [target]
+</pre></div>
+</div>
+<p>Minimum # of Parallel Operations</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --min-parallelism [number] [target]
+</pre></div>
+</div>
+<p>Maximum #  of Parallel Operations</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --max-parallelism [number] [target]
+</pre></div>
+</div>
+<p>Minimum Host Group Size</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --min-hostgroup [number] [targets]
+</pre></div>
+</div>
+<p>Maximum Host Group Size</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --max-hostgroup [number] [targets]
+</pre></div>
+</div>
+<p>Maximum RTT Timeout</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --initial-rtt-timeout [time] [target]
+</pre></div>
+</div>
+<p>Initial RTT Timeout</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --max-rtt-timeout [TTL] [target]
+</pre></div>
+</div>
+<p>Maximum Retries</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --max-retries [number] [target]
+</pre></div>
+</div>
+<p>Host Timeout</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --host-timeout [time] [target]
+</pre></div>
+</div>
+<p>Minimum Scan Delay</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --scan-delay [time] [target]
+</pre></div>
+</div>
+<p>Maximum Scan Delay</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --max-scan-delay [time] [target]
+</pre></div>
+</div>
+<p>Minimum Packet Rate</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --min-rate [number] [target]
+</pre></div>
+</div>
+<p>Maximum Packet Rate</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --max-rate [number] [target]
+</pre></div>
+</div>
+<p>Defeat Reset Rate Limits</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --defeat-rst-ratelimit [target]
+</pre></div>
+</div>
+</section>
+<section id="firewall-evasion-techniques">
+<h2>Firewall evasion techniques<a class="headerlink" href="#firewall-evasion-techniques" title="Permalink to this heading"></a></h2>
+<p>Fragment Packets</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -f [target]
+</pre></div>
+</div>
+<p>Specify a Specific MTU</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --mtu [MTU] [target]
+</pre></div>
+</div>
+<p>Use a Decoy</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -D RND:[number] [target]
+</pre></div>
+</div>
+<p>Idle Zombie Scan</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -sI [zombie] [target]
+</pre></div>
+</div>
+<p>Manually Specify a Source Port</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --source-port [port] [target]
+</pre></div>
+</div>
+<p>Append Random Data</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --data-length [size] [target]
+</pre></div>
+</div>
+<p>Randomize Target Scan Order</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --randomize-hosts [target]
+</pre></div>
+</div>
+<p>Spoof MAC Address</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --spoof-mac [MAC|0|vendor] [target]
+</pre></div>
+</div>
+<p>Send Bad Checksums</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --badsum [target]
+</pre></div>
+</div>
+</section>
+<section id="output-options">
+<h2>Output options<a class="headerlink" href="#output-options" title="Permalink to this heading"></a></h2>
+<p>Save Output to a Text File</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -oN [scan.txt] [target]
+</pre></div>
+</div>
+<p>Save Output to a XML File</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -oX [scan.xml] [target]
+</pre></div>
+</div>
+<p>Grepable Output</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -oG [scan.txt] [targets]
+</pre></div>
+</div>
+<p>Output All Supported File Types</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -oA [path/filename] [target]
+</pre></div>
+</div>
+<p>Periodically Display Statistics</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --stats-every [time] [target]
+</pre></div>
+</div>
+<p>133t Output</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -oS [scan.txt] [target]
+</pre></div>
+</div>
+</section>
+<section id="troubleshooting-and-debugging">
+<h2>Troubleshooting and debugging<a class="headerlink" href="#troubleshooting-and-debugging" title="Permalink to this heading"></a></h2>
+<p>Getting Help</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -h
+</pre></div>
+</div>
+<p>Display Nmap Version</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -V
+</pre></div>
+</div>
+<p>Verbose Output</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -v [target]
+</pre></div>
+</div>
+<p>Debugging</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -d [target]
+</pre></div>
+</div>
+<p>Display Port State Reason</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --reason [target]
+</pre></div>
+</div>
+<p>Only Display Open Ports</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --open [target]
+</pre></div>
+</div>
+<p>Trace Packets</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --packet-trace [target]
+</pre></div>
+</div>
+<p>Display Host Networking</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --iflist
+</pre></div>
+</div>
+<p>Specify a Network  Interface</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap -e [interface] [target]
+</pre></div>
+</div>
+</section>
+<section id="nmap-scripting-engine">
+<h2>Nmap scripting engine<a class="headerlink" href="#nmap-scripting-engine" title="Permalink to this heading"></a></h2>
+<p>Execute Individual Scripts</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --script [script.nse] [target]
+</pre></div>
+</div>
+<p>Execute Multiple Scripts</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --script [expression] [target]
+</pre></div>
+</div>
+<p>Script Categories</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># all, auth, default, discovery, external, intrusive, malware, safe, vuln
+</pre></div>
+</div>
+<p>Execute Scripts by Category</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --script [category] [target]
+</pre></div>
+</div>
+<p>Execute Multiple Script Categories</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --script [category1,category2,etc]
+</pre></div>
+</div>
+<p>Troubleshoot Scripts</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --script [script] --script-trace [target]
+</pre></div>
+</div>
+<p>Update the Script Database</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># nmap --script-updatedb
+</pre></div>
+</div>
+</section>
+<section id="ndiff">
+<h2>Ndiff<a class="headerlink" href="#ndiff" title="Permalink to this heading"></a></h2>
+<p>Comparison Using Ndiff</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># ndiff [scan1.xml] [scan2.xml]
+</pre></div>
+</div>
+<p>Ndiff Verbose Mode</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># ndiff -v [scan1.xml] [scan2.xml]
+</pre></div>
+</div>
+<p>XML Output Mode</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># ndiff --xml [scan1.xml] [scan2.xml]
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Nikto-cheatsheet.html" class="btn btn-neutral float-left" title="Nikto cheatsheet" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Port-scanning-cheatsheet.html" class="btn btn-neutral float-right" title="Port scanning cheatsheet" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+        <a href="https://unseen-uni.netlify.app/">Unseen University</a>, 2022
+
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>
